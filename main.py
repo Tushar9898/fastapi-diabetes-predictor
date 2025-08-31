@@ -40,3 +40,6 @@ def diabetes_pred(input_parameters: ModelInput):
         "prediction": int(prediction[0]),
         "message": "The person is diabetic" if prediction[0] == 1 else "The person is not diabetic"
     }
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)git add .
